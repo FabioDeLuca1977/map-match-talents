@@ -465,8 +465,18 @@
 
         /* Responsive */
         @media (max-width: 900px) {
+            body {
+                overflow: auto;
+            }
+            
+            .container {
+                height: auto;
+                overflow: visible;
+            }
+            
             .map-wrapper {
                 overflow-x: auto;
+                overflow-y: visible;
             }
             
             .map-container {
@@ -477,29 +487,26 @@
                 flex-direction: column;
                 gap: 10px;
             }
-
-            .phase-label {
-                display: none;
-            }
-        }
-
-        @media (max-width: 500px) {
-            .map-wrapper::before {
-                content: '👉 Scorri orizzontalmente per vedere la mappa completa';
-                display: block;
-                text-align: center;
-                padding: 10px;
-                background: #e3f2fd;
-                border-radius: 8px;
-                margin-bottom: 15px;
-                font-size: 0.85rem;
-                color: #1565C0;
-            }
         }
 
         @media (max-width: 768px) {
+            .header-left h1 {
+                font-size: 1.2rem;
+            }
+            
+            .header-right h2 {
+                font-size: 1rem;
+            }
+            
+            .click-instruction {
+                font-size: 0.7rem;
+                padding: 5px;
+            }
+            
             .cards-grid {
                 grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
                 padding: 15px;
             }
 
@@ -512,6 +519,28 @@
                 left: 0;
                 transform: none;
                 margin-bottom: 20px;
+            }
+            
+            .detail-header {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .map-wrapper {
+                padding: 5px;
+            }
+            
+            .map-wrapper::before {
+                content: '👉 Scorri orizzontalmente per vedere la mappa completa';
+                display: block;
+                text-align: center;
+                padding: 8px;
+                background: #e3f2fd;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                font-size: 0.75rem;
+                color: #1565C0;
             }
         }
     </style>
