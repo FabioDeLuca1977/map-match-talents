@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.5, maximum-scale=3.0">
     <title>Map & Match - 20 Energy Skills™</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
@@ -462,6 +462,40 @@
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .map-container {
+                grid-template-columns: 200px 200px 200px;
+                gap: 15px;
+            }
+            
+            .pilots-area, .initializers-area, .regulators-area, 
+            .achievers-area, .energizers-area {
+                width: 200px !important;
+            }
+            
+            .family-box {
+                padding: 10px;
+            }
+            
+            .family-box h2 {
+                font-size: 0.75rem;
+                margin-bottom: 8px;
+            }
+            
+            .talent-cell {
+                min-height: 75px;
+                padding: 6px 4px;
+            }
+            
+            .talent-cell .action {
+                font-size: 0.55rem;
+            }
+            
+            .talent-cell .name {
+                font-size: 0.72rem;
+            }
+        }
+        
         @media (max-width: 900px) {
             .map-wrapper {
                 overflow-x: auto;
@@ -469,7 +503,14 @@
             }
             
             .map-container {
-                min-width: 700px;
+                grid-template-columns: 180px 180px 180px;
+                gap: 12px;
+                min-width: 600px;
+            }
+            
+            .pilots-area, .initializers-area, .regulators-area, 
+            .achievers-area, .energizers-area {
+                width: 180px !important;
             }
 
             header {
@@ -478,17 +519,29 @@
             }
             
             .header-left h1 {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
             
             .header-right h2 {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+            
+            .talent-cell {
+                min-height: 70px;
+            }
+            
+            .talent-cell .action {
+                font-size: 0.5rem;
+            }
+            
+            .talent-cell .name {
+                font-size: 0.68rem;
             }
         }
 
         @media (max-width: 768px) {
             .click-instruction {
-                font-size: 0.75rem;
+                font-size: 0.7rem;
                 padding: 5px;
             }
             
@@ -520,34 +573,109 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             body {
                 font-size: 14px;
             }
             
+            .container {
+                padding: 5px 10px;
+            }
+            
             .header-left h1 {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .header-right h2 {
-                font-size: 0.95rem;
+                font-size: 0.85rem;
+            }
+            
+            .map-wrapper {
+                padding: 10px 5px;
             }
             
             .map-wrapper::before {
-                content: '👉 Scorri orizzontalmente';
+                content: '👉 Scorri orizzontalmente o usa zoom';
                 display: block;
                 text-align: center;
-                padding: 8px;
+                padding: 6px;
                 background: #e3f2fd;
                 border-radius: 6px;
-                margin-bottom: 10px;
-                font-size: 0.7rem;
+                margin-bottom: 8px;
+                font-size: 0.65rem;
                 color: #1565C0;
                 font-weight: 600;
             }
             
             .map-container {
-                min-width: 650px;
+                grid-template-columns: 160px 160px 160px;
+                gap: 10px;
+                min-width: 540px;
+            }
+            
+            .pilots-area, .initializers-area, .regulators-area, 
+            .achievers-area, .energizers-area {
+                width: 160px !important;
+            }
+            
+            .family-box {
+                padding: 8px;
+            }
+            
+            .family-box h2 {
+                font-size: 0.65rem;
+                margin-bottom: 6px;
+            }
+            
+            .talents-grid {
+                gap: 4px;
+            }
+            
+            .talent-cell {
+                min-height: 60px;
+                padding: 5px 3px;
+            }
+            
+            .talent-cell .action {
+                font-size: 0.45rem;
+            }
+            
+            .talent-cell .name {
+                font-size: 0.6rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .header-left h1 {
+                font-size: 0.9rem;
+            }
+            
+            .header-right h2 {
+                font-size: 0.75rem;
+            }
+            
+            .map-container {
+                grid-template-columns: 140px 140px 140px;
+                gap: 8px;
+                min-width: 480px;
+            }
+            
+            .pilots-area, .initializers-area, .regulators-area, 
+            .achievers-area, .energizers-area {
+                width: 140px !important;
+            }
+            
+            .talent-cell {
+                min-height: 55px;
+            }
+            
+            .talent-cell .action {
+                font-size: 0.4rem;
+                line-height: 1.1;
+            }
+            
+            .talent-cell .name {
+                font-size: 0.55rem;
             }
         }
     </style>
